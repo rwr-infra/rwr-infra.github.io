@@ -1,40 +1,67 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: RWR Infra
+description: RWR (Running with Rifles) Community Game Enhancement Tools Documentation
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Running with Rifles Community Game Enhancement Organization - Tools Documentation
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: View Tools
+      link: /tools/robin-web/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: GitHub Organization
+      link: https://github.com/rwr-infra
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## Next steps
+## Tools Overview
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Robin Web" icon="seti:html">
+		Web interface for querying all server status and official server archives.
+		[Learn more →](/tools/robin-web/)
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Robin Server" icon="seti:json">
+		Backend service providing data for robin-web.
+		[Learn more →](/tools/robin-server/)
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Robin Android" icon="seti:android">
+		Android APK for querying server status and archives on mobile.
+		[Learn more →](/tools/robin-android/)
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="RWR Toolbox" icon="seti:cargo">
+		Local desktop client with mod enhancement, local game data retrieval, and Steam launch parameter configuration.
+		[Learn more →](/tools/rwr-toolbox/)
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="RWR QQ Bot" icon="seti:elixir">
+		QQ Bot for querying server status in QQ groups via OneBOT API.
+		[Learn more →](/tools/rwr-qq-bot/)
 	</Card>
+	<Card title="RWRSG" icon="seti:image">
+		Web interface for creating player trade images for sharing buy/sell intentions.
+		[Learn more →](/tools/rwrsg/)
+	</Card>
+	<Card title="VSCode RWR Mod Tool" icon="seti:vscode">
+		VSCode extension for enhanced RWR Modding with AngelScript navigation and XML validation.
+		[Learn more →](/tools/vscode-rwr-mod-tool/)
+	</Card>
+</CardGrid>
+
+## Quick Links
+
+<CardGrid>
+	<LinkCard
+		title="GitHub Repository"
+		href="https://github.com/rwr-infra"
+		description="View all RWR Infra projects on GitHub"
+	/>
+	<LinkCard
+		title="Running with Rifles"
+		href="https://runningwithrifles.com/"
+		description="Official game website"
+	/>
 </CardGrid>

@@ -12,9 +12,18 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/rwr-infra' }],
 			sidebar: [
 				{
+					label: 'Getting Started',
+					items: [
+						{ label: 'Introduction', slug: 'index' },
+					],
+				},
+				{
+					label: 'Tools',
+					autogenerate: { directory: 'tools' },
+				},
+				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
 					],
 				},

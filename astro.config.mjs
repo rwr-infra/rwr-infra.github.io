@@ -4,10 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://rwr-infra.github.io',
+	output: 'static',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'RWR Infra',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/rwr-infra' }],
 			sidebar: [
 				{
 					label: 'Guides',

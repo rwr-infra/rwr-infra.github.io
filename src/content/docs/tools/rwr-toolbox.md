@@ -50,6 +50,11 @@ pnpm tauri dev
 pnpm tauri build
 ```
 
+## User Manual
+
+- [English Manual](/guides/rwr-toolbox-manual/)
+- [简体中文手册](/zh/guides/rwr-toolbox-manual/)
+
 ## Related Tools
 
 - [Robin Web](/tools/robin-web/) - Server query functionality

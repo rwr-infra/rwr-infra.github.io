@@ -10,6 +10,16 @@ export default defineConfig({
 		starlight({
 			title: 'RWR Infra',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/rwr-infra' }],
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en',
+				},
+				zh: {
+					label: '简体中文',
+					lang: 'zh-CN',
+				},
+			},
 			sidebar: [
 				{
 					label: 'Getting Started',
@@ -24,13 +34,10 @@ export default defineConfig({
 				{
 					label: 'Guides',
 					items: [
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'RWR Toolbox Manual', slug: 'guides/rwr-toolbox-manual' },
 					],
 				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+
 			],
 		}),
 	],

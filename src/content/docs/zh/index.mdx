@@ -1,0 +1,67 @@
+---
+title: RWR Infra
+description: RWR（Running with Rifles）社区游戏增强工具文档
+template: splash
+hero:
+  tagline: Running with Rifles 社区游戏增强组织 - 工具文档
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: 查看工具
+      link: /zh/tools/robin-web/
+      icon: right-arrow
+    - text: GitHub 组织
+      link: https://github.com/rwr-infra
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## 工具概览
+
+<CardGrid stagger>
+	<Card title="Robin Web" icon="seti:html">
+		用于查询所有服务器状态和官方服务器归档的 Web 界面。
+		[了解更多 →](/zh/tools/robin-web/)
+	</Card>
+	<Card title="Robin Server" icon="seti:json">
+		为 robin-web 提供数据的后端服务。
+		[了解更多 →](/zh/tools/robin-server/)
+	</Card>
+	<Card title="Robin Android" icon="seti:android">
+		用于在移动端查询服务器状态和归档的 Android 应用。
+		[了解更多 →](/zh/tools/robin-android/)
+	</Card>
+	<Card title="RWR Toolbox" icon="seti:cargo">
+		本地桌面客户端，提供模组增强、本地游戏数据检索和 Steam 启动参数配置。
+		[了解更多 →](/zh/tools/rwr-toolbox/)
+	</Card>
+	<Card title="RWR QQ Bot" icon="seti:elixir">
+		通过 OneBOT API 在 QQ 群中查询服务器状态的 QQ 机器人。
+		[了解更多 →](/zh/tools/rwr-qq-bot/)
+	</Card>
+	<Card title="RWRSG" icon="seti:image">
+		用于创建玩家交易图片以分享买卖意向的 Web 界面。
+		[了解更多 →](/zh/tools/rwrsg/)
+	</Card>
+	<Card title="VSCode RWR Mod Tool" icon="seti:vscode">
+		VSCode 扩展，提供 AngelScript 导航和 XML 验证，增强 RWR 模组开发体验。
+		[了解更多 →](/zh/tools/vscode-rwr-mod-tool/)
+	</Card>
+</CardGrid>
+
+## 快速链接
+
+<CardGrid>
+	<LinkCard
+		title="GitHub 仓库"
+		href="https://github.com/rwr-infra"
+		description="在 GitHub 上查看所有 RWR Infra 项目"
+	/>
+	<LinkCard
+		title="官方 Discord"
+		href="https://discord.gg/runningwithrifles"
+		description="RWR 游戏官方社区"
+	/>
+</CardGrid>

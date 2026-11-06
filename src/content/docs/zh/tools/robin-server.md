@@ -7,6 +7,18 @@ description: 为 Robin Web 提供标准化 JSON API、MCP 工具和静态文件�
 
 [Robin Web](/zh/tools/robin-web/) 的后端服务器，使用 Rust 和 Salvo 构建。它提供标准化的 HTTP JSON API、基于 Streamable HTTP 的只读 MCP Server、原始上游透传接口以及静态文件服务。
 
+:::tip[在线 MCP 端点]
+已有两个在线部署，可直接使用：
+
+- **国际站**: `https://robin.rwr-infra.uk/mcp`
+- **中国站 (CN)**: `https://robin.kreedzt.cn/mcp`
+:::
+
+```bash
+claude mcp add --transport http robin-rwr https://robin.rwr-infra.uk/mcp
+claude mcp add --transport http robin-rwr-cn https://robin.kreedzt.cn/mcp
+```
+
 ## 技术栈
 
 - **语言**: Rust
@@ -158,7 +170,7 @@ curl "http://localhost:5800/api/players.json?db=invasion&sort=kills&limit=10"
 
 进程同时提供基于 **Streamable HTTP** 的只读 [Model Context Protocol](https://modelcontextprotocol.io) Server。
 
-- 端点：`http://<MCP_HOST>:<MCP_PORT>/mcp`，默认 `http://127.0.0.1:5801/mcp`。
+- 自托管端点：`http://<MCP_HOST>:<MCP_PORT>/mcp`，默认 `http://127.0.0.1:5801/mcp`。
 - 传输：无状态 Streamable HTTP，返回 JSON 响应。每次 `POST /mcp` 都是独立请求，不需要 session ID。
 - 工具结果放在 `structuredContent` 中。参数非法返回 JSON-RPC `-32602`；上游失败或资源不存在时设置 `isError: true`，并在 `structuredContent.error` 中返回错误信息。
 - 当前版本：`0.6.1`。`initialize` 响应中的 `serverInfo.name` 为 `robin rwr`。

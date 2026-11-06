@@ -7,6 +7,18 @@ description: Backend server for Robin Web, providing normalized JSON APIs, MCP t
 
 Backend server for [Robin Web](/tools/robin-web/), built with Rust and Salvo. It provides normalized JSON over HTTP, a read-only MCP server over Streamable HTTP, raw upstream passthrough endpoints, and static file serving.
 
+:::tip[Hosted MCP endpoints]
+Two public deployments are already available and can be used directly:
+
+- **Global**: `https://robin.rwr-infra.uk/mcp`
+- **China (CN)**: `https://robin.kreedzt.cn/mcp`
+:::
+
+```bash
+claude mcp add --transport http robin-rwr https://robin.rwr-infra.uk/mcp
+claude mcp add --transport http robin-rwr-cn https://robin.kreedzt.cn/mcp
+```
+
 ## Technical Stack
 
 - **Language**: Rust
@@ -158,7 +170,7 @@ Both JSON endpoints return a JSON error body:
 
 The process also serves a read-only [Model Context Protocol](https://modelcontextprotocol.io) server over **Streamable HTTP**.
 
-- Endpoint: `http://<MCP_HOST>:<MCP_PORT>/mcp`; default `http://127.0.0.1:5801/mcp`.
+- Self-hosted endpoint: `http://<MCP_HOST>:<MCP_PORT>/mcp`; default `http://127.0.0.1:5801/mcp`.
 - Transport: stateless Streamable HTTP with JSON responses. Every `POST /mcp` is independent; no session ID is required.
 - Tool results use `structuredContent`. Invalid arguments return JSON-RPC `-32602`; upstream or not-found failures set `isError: true` with `structuredContent.error`.
 - Current release: `0.6.1`. The `initialize` response reports `serverInfo.name` as `robin rwr`.

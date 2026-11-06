@@ -7,16 +7,12 @@ description: Backend server for Robin Web, providing normalized JSON APIs, MCP t
 
 Backend server for [Robin Web](/tools/robin-web/), built with Rust and Salvo. It provides normalized JSON over HTTP, a read-only MCP server over Streamable HTTP, raw upstream passthrough endpoints, and static file serving.
 
-:::tip[Hosted MCP endpoints]
-Two public deployments are already available and can be used directly:
-
-- **Global**: `https://robin.rwr-infra.uk/mcp`
-- **China (CN)**: `https://robin.kreedzt.cn/mcp`
+:::tip[Hosted MCP endpoint]
+The global deployment is available at `https://robin.rwr-infra.uk/mcp`.
 :::
 
 ```bash
 claude mcp add --transport http robin-rwr https://robin.rwr-infra.uk/mcp
-claude mcp add --transport http robin-rwr-cn https://robin.kreedzt.cn/mcp
 ```
 
 ## Technical Stack

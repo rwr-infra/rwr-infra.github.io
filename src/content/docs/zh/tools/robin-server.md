@@ -8,11 +8,15 @@ description: 为 Robin Web 提供标准化 JSON API、MCP 工具和静态文件�
 [Robin Web](/zh/tools/robin-web/) 的后端服务器，使用 Rust 和 Salvo 构建。它提供标准化的 HTTP JSON API、基于 Streamable HTTP 的只读 MCP Server、原始上游透传接口以及静态文件服务。
 
 :::tip[在线 MCP 端点]
-国际站部署可直接使用：`https://robin.rwr-infra.uk/mcp`。
+已有两个在线部署，可直接使用：
+
+- **国际站**: `https://robin.rwr-infra.uk/mcp`
+- **中国站 (CN)**: `https://robin.kreedzt.cn/mcp`
 :::
 
 ```bash
 claude mcp add --transport http robin-rwr https://robin.rwr-infra.uk/mcp
+claude mcp add --transport http robin-rwr-cn https://robin.kreedzt.cn/mcp
 ```
 
 ## 技术栈
